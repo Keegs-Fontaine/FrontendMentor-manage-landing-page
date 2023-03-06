@@ -1,0 +1,77 @@
+@use "../globals" as *;
+
+.primary-header {
+  @include wrapper();
+  padding-block: 1.5rem;
+
+  &__nav {
+    @include flex();
+  }
+
+  &__list {
+    @include flex();
+    width: 55vw;
+    max-width: 50rem;
+
+    a {
+      @include transition(opacity);
+      color: $clr-primary-dark;
+
+      &:hover {
+        opacity: 0.65;
+      }
+    }
+  }
+
+  &__ham {
+    display: none;
+  }
+
+  @include breakpoint-down(small) {
+    &__list {
+      @include flex(column);
+      @include transition();
+      position: absolute;
+      top: 15%;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: -999;
+      padding: 1rem;
+      background-color: $clr-neutral-999;
+      opacity: 0;
+
+      li {
+        padding-block: 0.5rem;
+      }
+    }
+
+    .btn-primary {
+      display: none;
+    }
+
+    &__ham {
+      display: block;
+      width: 2rem;
+      aspect-ratio: 1.3;
+      background-image: url("../images/icon-hamburger.svg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      cursor: pointer;
+    }
+
+    &.active {
+      .primary-header {
+        &__list {
+          z-index: 999;
+          opacity: 1;
+          box-shadow: 0 0 0 10000vw $clr-neutral-100-transparent;
+        }
+
+        &__ham {
+          background-image: url("../images/icon-close.svg");
+        }
+      }
+    }
+  }
+}

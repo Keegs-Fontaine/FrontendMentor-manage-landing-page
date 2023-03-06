@@ -1,0 +1,21 @@
+@mixin flex(
+  $direction: row,
+  $flex-type: flex,
+  $justify: space-between,
+  $align: center
+) {
+  display: $flex-type;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+}
+
+@mixin wrapper($padding-inline: 1rem, $max-width: 90em) {
+  padding-inline: $padding-inline;
+  max-width: $max-width;
+  margin-inline: auto;
+}
+
+@mixin transition($property: all, $duration: 0.2s, $function: ease-in-out) {
+  transition: $duration $function $property;
+}

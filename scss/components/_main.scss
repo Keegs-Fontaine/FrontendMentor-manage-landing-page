@@ -1,0 +1,14 @@
+@use "../globals" as *;
+
+main {
+  @include wrapper();
+  text-align: center;
+
+  .btn-primary {
+    margin-block: 2rem;
+  }
+
+  .list {
+    text-align: left;
+  }
+}
