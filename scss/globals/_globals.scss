@@ -24,8 +24,13 @@ body {
 
 .primary-paragraph {
   color: $clr-neutral-600;
+  font-size: 1.1rem;
 }
 
 .primary-title {
   color: $clr-primary-dark;
+}
+
+.flow > * + * {
+  margin-top: var(--spacer, 4rem);
 }

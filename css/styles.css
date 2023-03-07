@@ -102,10 +102,15 @@ body {
 
 .primary-paragraph {
   color: hsl(227, 12%, 61%);
+  font-size: 1.1rem;
 }
 
 .primary-title {
   color: hsl(228, 39%, 23%);
+}
+
+.flow > * + * {
+  margin-top: var(--spacer, 4rem);
 }
 
 .primary-header {
@@ -186,9 +191,42 @@ main {
   margin-inline: auto;
   text-align: center;
 }
+main .statistics img {
+  margin-inline: auto;
+}
+main .info {
+  margin-top: 0;
+}
+main .info .primary-title {
+  font-size: 2rem;
+}
 main .btn-primary {
   margin-block: 2rem;
 }
 main .list {
   text-align: left;
+  counter-reset: count;
+}
+main .list li {
+  counter-increment: count;
+}
+main .list .primary-title {
+  height: 2.3rem;
+  margin-bottom: 0.5rem;
+  line-height: 2.3rem;
+  font-size: clamp(1rem, 2vw, 1.1rem);
+  background-color: hsl(13, 100%, 96%);
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  box-shadow: 1rem 0 0 0 hsl(13, 100%, 96%);
+}
+main .list .primary-title::before {
+  content: "0" counter(count);
+  display: inline-block;
+  height: 100%;
+  padding-inline: 1.25rem;
+  margin-right: 0.4rem;
+  color: hsl(0, 0%, 98%);
+  background-color: hsl(12, 88%, 59%);
+  border-radius: 100vw;
 }/*# sourceMappingURL=styles.css.map */

@@ -4,11 +4,56 @@ main {
   @include wrapper();
   text-align: center;
 
+  .statistics {
+    img {
+      margin-inline: auto;
+    }
+  }
+
+  .info {
+    margin-top: 0;
+
+    .primary-title {
+      font-size: 2rem;
+    }
+  }
+
   .btn-primary {
     margin-block: 2rem;
   }
 
   .list {
     text-align: left;
+
+    counter-reset: count;
+
+    li {
+      counter-increment: count;
+    }
+
+    .primary-title {
+      $box-height: 2.3rem;
+      $border-radius: 1rem;
+
+      height: $box-height;
+      margin-bottom: 0.5rem;
+      line-height: $box-height;
+      font-size: clamp(1rem, 2vw, 1.1rem);
+      background-color: $clr-neutral-900;
+      border-top-left-radius: $border-radius;
+      border-bottom-left-radius: $border-radius;
+      box-shadow: 1rem 0 0 0 $clr-neutral-900;
+
+      &::before {
+        content: "0" counter(count);
+        display: inline-block;
+        height: 100%;
+        padding-inline: 1.25rem;
+        margin-right: 0.4rem;
+        color: $clr-neutral-999;
+        background-color: $clr-primary-light;
+        border-radius: 100vw;
+      }
+    }
   }
 }
