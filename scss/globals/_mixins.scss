@@ -10,7 +10,7 @@
   flex-direction: $direction;
 }
 
-@mixin wrapper($padding-inline: 1rem, $max-width: 90em) {
+@mixin wrapper($padding-inline: 1rem, $max-width: 80em) {
   padding-inline: $padding-inline;
   max-width: $max-width;
   margin-inline: auto;

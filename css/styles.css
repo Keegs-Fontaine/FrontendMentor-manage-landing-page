@@ -106,6 +106,7 @@ body {
 
 .primary-title {
   color: hsl(228, 39%, 23%);
+  max-width: 32rem;
 }
 
 .flow > * + * {
@@ -114,7 +115,7 @@ body {
 
 .primary-header {
   padding-inline: 1rem;
-  max-width: 90em;
+  max-width: 80em;
   margin-inline: auto;
   padding-block: 1.5rem;
 }
@@ -186,7 +187,7 @@ body {
 
 main {
   padding-inline: 1rem;
-  max-width: 90em;
+  max-width: 80em;
   margin-inline: auto;
   text-align: center;
 }
@@ -228,4 +229,35 @@ main .list .primary-title::before {
   color: hsl(0, 0%, 98%);
   background-color: hsl(12, 88%, 59%);
   border-radius: 100vw;
+}
+@media screen and (min-width: 55em) {
+  main {
+    display: grid;
+    grid-template-areas: "i s" "a l";
+    gap: 4rem;
+    margin-top: 3rem;
+    text-align: left;
+  }
+  main .primary-paragraph {
+    max-width: 25rem;
+  }
+  main .btn-primary {
+    margin-inline: 0;
+  }
+  main .statistics {
+    grid-area: s;
+  }
+  main .info .primary-title {
+    font-size: 3rem;
+  }
+  main .about .primary-title {
+    font-size: 2rem;
+  }
+  main .list .primary-title {
+    background-color: transparent;
+    box-shadow: none;
+  }
+  main .list .primary-paragraph {
+    margin-left: 4.3rem;
+  }
 }/*# sourceMappingURL=styles.css.map */

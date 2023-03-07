@@ -56,4 +56,47 @@ main {
       }
     }
   }
+
+  @include breakpoint-up(small) {
+    display: grid;
+    grid-template-areas: "i s" "a l";
+    gap: 4rem;
+    margin-top: 3rem;
+    text-align: left;
+
+    .primary-paragraph {
+      max-width: 25rem;
+    }
+
+    .btn-primary {
+      margin-inline: 0;
+    }
+
+    .statistics {
+      grid-area: s;
+    }
+
+    .info {
+      .primary-title {
+        font-size: 3rem;
+      }
+    }
+
+    .about {
+      .primary-title {
+        font-size: 2rem;
+      }
+    }
+
+    .list {
+      .primary-title {
+        background-color: transparent;
+        box-shadow: none;
+      }
+
+      .primary-paragraph {
+        margin-left: 4.3rem;
+      }
+    }
+  }
 }
