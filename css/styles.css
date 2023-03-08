@@ -288,9 +288,11 @@ main .list .primary-title::before {
   transform: translate(-50%, -50%);
   min-width: 20rem;
   width: 80vw;
-  max-width: 25rem;
+  max-width: 30rem;
+  height: 10rem;
+  padding-inline: 2rem;
   text-align: center;
-  border: 5px solid black;
+  background-color: hsl(0, 0%, 98%);
 }
 .carousel .card:nth-child(1) {
   left: -50%;
@@ -306,6 +308,10 @@ main .list .primary-title::before {
 }
 .carousel .card__img {
   width: 5rem;
+  transform: translateY(-2.5rem);
+}
+.carousel .card__name {
+  transform: translateY(-1.25rem);
 }
 @media screen and (min-width: 55em) {
   .carousel .card:nth-child(1) {

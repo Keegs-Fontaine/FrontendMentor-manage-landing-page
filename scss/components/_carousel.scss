@@ -11,6 +11,8 @@
   }
 
   .card {
+    $img-box-size: 5rem;
+
     @include flex(column);
     position: absolute;
     top: 50%;
@@ -18,9 +20,11 @@
     transform: translate(-50%, -50%);
     min-width: 20rem;
     width: 80vw;
-    max-width: 25rem;
+    max-width: 30rem;
+    height: 10rem;
+    padding-inline: 2rem;
     text-align: center;
-    border: 5px solid black;
+    background-color: $clr-neutral-999;
 
     @for $i from 1 through 4 {
       &:nth-child(#{$i}) {
@@ -29,7 +33,12 @@
     }
 
     &__img {
-      width: 5rem;
+      width: $img-box-size;
+      transform: translateY(calc($img-box-size / -2));
+    }
+
+    &__name {
+      transform: translateY(calc($img-box-size / -4));
     }
   }
 
