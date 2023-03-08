@@ -34,8 +34,7 @@
       position: absolute;
       top: 15%;
       left: 50%;
-      transform: translateX(-50%);
-      z-index: -999;
+      transform: translateX(-50%) scale(0);
       padding: 1rem;
       background-color: $clr-neutral-999;
       opacity: 0;
@@ -63,7 +62,8 @@
     &.active {
       .primary-header {
         &__list {
-          z-index: 999;
+          transform: translateX(-50%) scale(1);
+          z-index: 500;
           opacity: 1;
           box-shadow: 0 0 0 10000vw $clr-neutral-100-transparent;
         }

@@ -35,7 +35,7 @@ main {
       $box-height: 2.3rem;
       $border-radius: 1rem;
 
-      height: $box-height;
+      min-height: $box-height;
       margin-bottom: 0.5rem;
       line-height: $box-height;
       font-size: clamp(1rem, 2vw, 1.1rem);
