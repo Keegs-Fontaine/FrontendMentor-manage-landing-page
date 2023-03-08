@@ -11,7 +11,7 @@
   &__list {
     @include flex();
     width: 55vw;
-    max-width: 50rem;
+    max-width: 40rem;
 
     a {
       @include transition(opacity);

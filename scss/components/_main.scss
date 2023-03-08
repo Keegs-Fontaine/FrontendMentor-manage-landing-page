@@ -88,6 +88,13 @@ main {
       }
     }
 
+    .info,
+    .about {
+      .primary-title {
+        max-width: 30rem;
+      }
+    }
+
     .list {
       .primary-title {
         background-color: transparent;

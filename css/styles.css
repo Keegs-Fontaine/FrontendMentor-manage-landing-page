@@ -106,7 +106,6 @@ body {
 
 .primary-title {
   color: hsl(228, 39%, 23%);
-  max-width: 32rem;
 }
 
 .flow > * + * {
@@ -115,7 +114,7 @@ body {
 
 .primary-header {
   padding-inline: 1rem;
-  max-width: 80em;
+  max-width: 75em;
   margin-inline: auto;
   padding-block: 1.5rem;
 }
@@ -131,7 +130,7 @@ body {
   align-items: center;
   flex-direction: row;
   width: 55vw;
-  max-width: 50rem;
+  max-width: 40rem;
 }
 .primary-header__list a {
   transition: 0.2s ease-in-out opacity;
@@ -187,7 +186,7 @@ body {
 
 main {
   padding-inline: 1rem;
-  max-width: 80em;
+  max-width: 75em;
   margin-inline: auto;
   text-align: center;
 }
@@ -253,11 +252,72 @@ main .list .primary-title::before {
   main .about .primary-title {
     font-size: 2rem;
   }
+  main .info .primary-title,
+  main .about .primary-title {
+    max-width: 30rem;
+  }
   main .list .primary-title {
     background-color: transparent;
     box-shadow: none;
   }
   main .list .primary-paragraph {
     margin-left: 4.3rem;
+  }
+}
+
+.carousel {
+  text-align: center;
+}
+.carousel .card-container {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  position: relative;
+  height: 25rem;
+  width: 100vw;
+}
+.carousel .card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 20rem;
+  width: 80vw;
+  max-width: 25rem;
+  text-align: center;
+  border: 5px solid black;
+}
+.carousel .card:nth-child(1) {
+  left: -50%;
+}
+.carousel .card:nth-child(2) {
+  left: 50%;
+}
+.carousel .card:nth-child(3) {
+  left: 150%;
+}
+.carousel .card:nth-child(4) {
+  left: 250%;
+}
+.carousel .card__img {
+  width: 5rem;
+}
+@media screen and (min-width: 55em) {
+  .carousel .card:nth-child(1) {
+    left: 0%;
+  }
+  .carousel .card:nth-child(2) {
+    left: 50%;
+  }
+  .carousel .card:nth-child(3) {
+    left: 100%;
+  }
+  .carousel .card:nth-child(4) {
+    left: 150%;
   }
 }/*# sourceMappingURL=styles.css.map */
