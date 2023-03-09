@@ -266,6 +266,7 @@ main .list .primary-title::before {
 }
 
 .carousel {
+  margin-top: 4rem;
   text-align: center;
 }
 .carousel .card-container {
@@ -282,6 +283,7 @@ main .list .primary-title::before {
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
+  transition: 1s ease-in-out left;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -289,22 +291,22 @@ main .list .primary-title::before {
   min-width: 20rem;
   width: 80vw;
   max-width: 30rem;
-  height: 10rem;
+  height: 15rem;
   padding-inline: 2rem;
   text-align: center;
   background-color: hsl(0, 0%, 98%);
 }
-.carousel .card:nth-child(1) {
+.carousel .card[data-order="1"] {
+  left: -150%;
+}
+.carousel .card[data-order="2"] {
   left: -50%;
 }
-.carousel .card:nth-child(2) {
+.carousel .card[data-order="3"] {
   left: 50%;
 }
-.carousel .card:nth-child(3) {
+.carousel .card[data-order="4"] {
   left: 150%;
-}
-.carousel .card:nth-child(4) {
-  left: 250%;
 }
 .carousel .card__img {
   width: 5rem;
@@ -313,17 +315,23 @@ main .list .primary-title::before {
 .carousel .card__name {
   transform: translateY(-1.25rem);
 }
-@media screen and (min-width: 55em) {
-  .carousel .card:nth-child(1) {
+.carousel .card__quote {
+  transform: translateY(-1.25rem);
+}
+@media screen and (min-width: 65em) {
+  .carousel .card[data-order="1"] {
+    left: -50%;
+  }
+  .carousel .card[data-order="2"] {
     left: 0%;
   }
-  .carousel .card:nth-child(2) {
+  .carousel .card[data-order="3"] {
     left: 50%;
   }
-  .carousel .card:nth-child(3) {
+  .carousel .card[data-order="4"] {
     left: 100%;
   }
-  .carousel .card:nth-child(4) {
+  .carousel .card[data-order="5"] {
     left: 150%;
   }
 }/*# sourceMappingURL=styles.css.map */
