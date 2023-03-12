@@ -4,6 +4,10 @@ main {
   @include wrapper();
   text-align: center;
 
+  > * {
+    margin-inline: auto;
+  }
+
   .statistics {
     img {
       margin-inline: auto;

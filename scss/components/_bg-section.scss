@@ -1,0 +1,27 @@
+@use "../globals" as *;
+
+.bg-svg {
+  @include wrapper();
+  position: absolute;
+  top: 0;
+  left: 50%;
+  z-index: -1;
+  transform: translateX(-50%);
+  width: 100vw;
+
+  img {
+    position: absolute;
+    width: 100%;
+    max-width: 45rem;
+
+    &:first-child {
+      right: 0;
+      transform: translate(25%, -10%);
+    }
+
+    &:last-child {
+      left: 0;
+      transform: translate(-42%, 95%);
+    }
+  }
+}

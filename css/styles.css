@@ -83,6 +83,7 @@ button {
 body {
   font-family: "Be Vietnam Pro", sans-serif;
   font-size: 1rem;
+  overflow-x: hidden;
 }
 
 .btn-primary {
@@ -189,6 +190,9 @@ main {
   max-width: 75em;
   margin-inline: auto;
   text-align: center;
+}
+main > * {
+  margin-inline: auto;
 }
 main .statistics img {
   margin-inline: auto;
@@ -334,4 +338,29 @@ main .list .primary-title::before {
   .carousel .card[data-order="5"] {
     left: 150%;
   }
+}
+
+.bg-svg {
+  padding-inline: 1rem;
+  max-width: 75em;
+  margin-inline: auto;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  z-index: -1;
+  transform: translateX(-50%);
+  width: 100vw;
+}
+.bg-svg img {
+  position: absolute;
+  width: 100%;
+  max-width: 45rem;
+}
+.bg-svg img:first-child {
+  right: 0;
+  transform: translate(25%, -10%);
+}
+.bg-svg img:last-child {
+  left: 0;
+  transform: translate(-42%, 95%);
 }/*# sourceMappingURL=styles.css.map */
