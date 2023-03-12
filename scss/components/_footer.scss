@@ -1,0 +1,31 @@
+@use "../globals" as *;
+
+.footer {
+  .container {
+    width: 100%;
+    padding: 2.5rem;
+
+    &:first-child {
+      background-color: $clr-primary-light;
+    }
+  }
+
+  .simplify {
+    text-align: center;
+
+    .primary-title {
+      font-size: 1.8rem;
+      color: $clr-neutral-999;
+    }
+
+    .btn-primary {
+      margin-inline: auto;
+      color: $clr-primary-light;
+      background-color: $clr-neutral-999;
+
+      &:hover {
+        box-shadow: 0 0 0.95rem $clr-neutral-999;
+      }
+    }
+  }
+}

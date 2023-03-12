@@ -363,4 +363,27 @@ main .list .primary-title::before {
 .bg-svg img:last-child {
   left: 0;
   transform: translate(-42%, 95%);
+}
+
+.footer .container {
+  width: 100%;
+  padding: 2.5rem;
+}
+.footer .container:first-child {
+  background-color: hsl(12, 88%, 59%);
+}
+.footer .simplify {
+  text-align: center;
+}
+.footer .simplify .primary-title {
+  font-size: 1.8rem;
+  color: hsl(0, 0%, 98%);
+}
+.footer .simplify .btn-primary {
+  margin-inline: auto;
+  color: hsl(12, 88%, 59%);
+  background-color: hsl(0, 0%, 98%);
+}
+.footer .simplify .btn-primary:hover {
+  box-shadow: 0 0 0.95rem hsl(0, 0%, 98%);
 }/*# sourceMappingURL=styles.css.map */
