@@ -120,7 +120,7 @@ body {
 
 .primary-header {
   padding-inline: 1rem;
-  max-width: 75em;
+  max-width: 85em;
   margin-inline: auto;
   padding-block: 1.5rem;
 }
@@ -192,7 +192,7 @@ body {
 
 main {
   padding-inline: 1rem;
-  max-width: 75em;
+  max-width: 85em;
   margin-inline: auto;
   text-align: center;
 }
@@ -347,7 +347,7 @@ main .list .primary-title::before {
 
 .bg-svg {
   padding-inline: 1rem;
-  max-width: 75em;
+  max-width: 85em;
   margin-inline: auto;
   position: absolute;
   top: 0;
@@ -372,7 +372,7 @@ main .list .primary-title::before {
 
 .footer .container {
   padding-inline: 1rem;
-  max-width: 75em;
+  max-width: 85em;
   margin-inline: auto;
   width: 100%;
   padding: 2.5rem;
@@ -401,7 +401,9 @@ main .list .primary-title::before {
   justify-content: space-between;
   align-items: center;
   flex-direction: space-between;
+  max-width: 19rem;
   height: 2.8rem;
+  margin-inline: auto;
 }
 .footer .main-footer__input > * {
   height: 100%;
@@ -433,7 +435,11 @@ main .list .primary-title::before {
   margin-bottom: 1rem;
 }
 .footer .main-footer__primary-nav li a {
+  transition: 0.2s ease-in-out color;
   color: white;
+}
+.footer .main-footer__primary-nav li a:hover {
+  color: hsl(12, 88%, 59%);
 }
 .footer .main-footer__social-nav ul {
   display: flex;
@@ -443,4 +449,36 @@ main .list .primary-title::before {
 }
 .footer .main-footer__logo img {
   margin-inline: auto;
+}
+@media screen and (min-width: 55em) {
+  .footer .main-footer .container {
+    display: grid;
+    grid-template-areas: "logo primary-nav input" "social-nav primary-nav copyright";
+    justify-content: space-around;
+    gap: 5rem;
+  }
+  .footer .main-footer .container > * {
+    margin: 0;
+  }
+  .footer .main-footer__logo {
+    grid-area: logo;
+  }
+  .footer .main-footer__logo img {
+    margin: 0;
+  }
+  .footer .main-footer__primary-nav {
+    grid-area: primary-nav;
+  }
+  .footer .main-footer__primary-nav > * {
+    margin-inline: 5rem;
+  }
+  .footer .main-footer__input {
+    grid-area: input;
+  }
+  .footer .main-footer__social-nav {
+    grid-area: social-nav;
+  }
+  .footer .main-footer__copyright {
+    grid-area: copyright;
+  }
 }/*# sourceMappingURL=styles.css.map */

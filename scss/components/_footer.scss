@@ -32,7 +32,9 @@
 
     &__input {
       @include flex(space-between);
+      max-width: 19rem;
       height: 2.8rem;
+      margin-inline: auto;
 
       > * {
         height: 100%;
@@ -66,7 +68,12 @@
         margin-bottom: 1rem;
 
         a {
+          @include transition(color);
           color: white;
+
+          &:hover {
+            color: $clr-primary-light;
+          }
         }
       }
     }
@@ -80,6 +87,50 @@
     &__logo {
       img {
         margin-inline: auto;
+      }
+    }
+
+    @include breakpoint-up("small") {
+      .container {
+        display: grid;
+        grid-template-areas:
+          "logo primary-nav input"
+          "social-nav primary-nav copyright";
+        justify-content: space-around;
+
+        gap: 5rem;
+
+        > * {
+          margin: 0;
+        }
+      }
+
+      &__logo {
+        grid-area: logo;
+
+        img {
+          margin: 0;
+        }
+      }
+
+      &__primary-nav {
+        grid-area: primary-nav;
+
+        > * {
+          margin-inline: 5rem;
+        }
+      }
+
+      &__input {
+        grid-area: input;
+      }
+
+      &__social-nav {
+        grid-area: social-nav;
+      }
+
+      &__copyright {
+        grid-area: copyright;
       }
     }
   }
