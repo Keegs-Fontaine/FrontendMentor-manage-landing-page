@@ -21,7 +21,7 @@ function moveCards() {
         setTimeout(() => {
           card.style.opacity = 1;
         }, 1000);
-      }, 400);
+      }, 200);
     }
   });
 }
