@@ -1,10 +1,15 @@
 @use "variables" as *;
 @use "mixins" as *;
 
+html,
+body {
+  overflow-x: hidden;
+  position: relative;
+}
+
 body {
   font-family: "Be Vietnam Pro", sans-serif;
   font-size: 1rem;
-  overflow-x: hidden;
 }
 
 .btn-primary {

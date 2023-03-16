@@ -90,6 +90,12 @@
       }
     }
 
+    &__copyright {
+      text-align: center;
+      color: $clr-neutral-999;
+      font-size: 0.8rem;
+    }
+
     @include breakpoint-up("small") {
       .container {
         display: grid;
@@ -97,7 +103,6 @@
           "logo primary-nav input"
           "social-nav primary-nav copyright";
         justify-content: space-around;
-
         gap: 5rem;
 
         > * {

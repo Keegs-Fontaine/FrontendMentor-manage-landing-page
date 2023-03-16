@@ -85,10 +85,15 @@ input {
   border: 0;
 }
 
+html,
+body {
+  overflow-x: hidden;
+  position: relative;
+}
+
 body {
   font-family: "Be Vietnam Pro", sans-serif;
   font-size: 1rem;
-  overflow-x: hidden;
 }
 
 .btn-primary {
@@ -449,6 +454,11 @@ main .list .primary-title::before {
 }
 .footer .main-footer__logo img {
   margin-inline: auto;
+}
+.footer .main-footer__copyright {
+  text-align: center;
+  color: hsl(0, 0%, 98%);
+  font-size: 0.8rem;
 }
 @media screen and (min-width: 55em) {
   .footer .main-footer .container {
