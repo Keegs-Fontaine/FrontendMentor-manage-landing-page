@@ -11,8 +11,6 @@ function moveCards() {
   cards.forEach((card) => {
     card.dataset.order = parseInt(card.dataset.order) + 1;
 
-    console.log(card.dataset.order);
-
     if (card.dataset.order > cards.length) {
       setTimeout(() => {
         card.style.opacity = 0;
