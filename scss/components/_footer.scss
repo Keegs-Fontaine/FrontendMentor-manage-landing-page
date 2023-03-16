@@ -2,16 +2,14 @@
 
 .footer {
   .container {
+    @include wrapper();
     width: 100%;
     padding: 2.5rem;
-
-    &:first-child {
-      background-color: $clr-primary-light;
-    }
   }
 
   .simplify {
     text-align: center;
+    background-color: $clr-primary-light;
 
     .primary-title {
       font-size: 1.8rem;
@@ -25,6 +23,63 @@
 
       &:hover {
         box-shadow: 0 0 0.95rem $clr-neutral-999;
+      }
+    }
+  }
+
+  .main-footer {
+    background-color: $clr-neutral-100;
+
+    &__input {
+      @include flex(space-between);
+      height: 2.8rem;
+
+      > * {
+        height: 100%;
+        font-size: 0.9rem;
+        border-radius: 100vw;
+      }
+
+      input {
+        padding-inline: 0.9rem;
+      }
+
+      input:hover,
+      input:focus {
+        @include transition(box-shadow);
+        box-shadow: inset 0 0 0.5rem $clr-primary-light;
+        outline: 0;
+      }
+
+      .submit-btn {
+        padding-inline: 2rem;
+        text-align: center;
+        color: white;
+        background-color: $clr-primary-light;
+      }
+    }
+
+    &__primary-nav {
+      @include flex(row, flex, space-between, flex-start);
+
+      li {
+        margin-bottom: 1rem;
+
+        a {
+          color: white;
+        }
+      }
+    }
+
+    &__social-nav {
+      ul {
+        @include flex();
+      }
+    }
+
+    &__logo {
+      img {
+        margin-inline: auto;
       }
     }
   }
